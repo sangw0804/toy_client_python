@@ -22,8 +22,10 @@ while True:
       print(client.cwd(cmd[1]))
     elif cmd[0] == 'mkdir':
       print(client.mkd(cmd[1]))
-    elif cmd[0] == 'rm':
+    elif cmd[0] == 'rmdir':
       print(client.rmd(cmd[1]))
+    elif cmd[0] == 'rm':
+      print(client.delete(cmd[1]))
     elif cmd[0] == 'send':
       print(client.storbinary(f'STOR {cmd[1]}', open(cmd[1], 'rb')))
     elif cmd[0] == 'get':
